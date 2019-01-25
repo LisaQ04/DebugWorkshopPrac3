@@ -2,7 +2,7 @@
 using System.Linq;
 using System.Text.RegularExpressions;
 using System.Threading;
-
+using System.Data;
 namespace debugws3
 {
   public struct Result
@@ -117,7 +117,8 @@ namespace debugws3
         }
         j++;
       }
-
+      DataTable table = new DataTable();
+result = Convert.ToDouble(table.Compute(input,null));
       return new Result(result, "");
     }
 
